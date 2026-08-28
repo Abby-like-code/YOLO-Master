@@ -1,0 +1,210 @@
+{
+  "alignment": {
+    "align_dim": 32,
+    "channel_method": "P4AlignmentProjector student 1x1 Conv+BN; frozen teacher 1x1 Conv/Identity",
+    "projector_trainable": true,
+    "spatial_from_shape": [
+      4,
+      4
+    ],
+    "spatial_method": "native_no_resize",
+    "spatial_to_shape": [
+      4,
+      4
+    ],
+    "student_channels": 128,
+    "student_shape": [
+      2,
+      32,
+      4,
+      4
+    ],
+    "teacher_channels": 24,
+    "teacher_projection_frozen": true,
+    "teacher_shape": [
+      2,
+      32,
+      4,
+      4
+    ]
+  },
+  "checks": {
+    "alignment_success": true,
+    "finite_loss": true,
+    "kd_loss_decreased": true,
+    "nonzero_loss": true,
+    "projector_gradient": true,
+    "student_feature_extracted": true,
+    "student_gradient": true,
+    "teacher_excluded_from_optimizer": true,
+    "teacher_feature_extracted": true,
+    "teacher_frozen": true
+  },
+  "claim": "admission_smoke_only_no_accuracy_claim",
+  "environment": {
+    "cuda_available": false,
+    "cuda_runtime": null,
+    "gpu": "none",
+    "gpu_count": 0,
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]",
+    "python_executable": "C:\\Users\\16511\\AppData\\Local\\Programs\\Python\\Python314\\python.exe",
+    "torch": "2.13.0+cpu",
+    "ultralytics": "8.4.101",
+    "ultralytics_file": "C:\\Users\\16511\\Documents\\ChatGPT\\New project\\YOLO-Master-main\\ultralytics\\__init__.py"
+  },
+  "loss_history": [
+    {
+      "kd_loss": 1.2144503593444824,
+      "projector_grad_norm": 1.5178091528149533,
+      "step": 0,
+      "student_grad_norm": 391.2784065101276,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 2.428900718688965
+    },
+    {
+      "kd_loss": 1.1472262144088745,
+      "projector_grad_norm": 1.8351106101737327,
+      "step": 1,
+      "student_grad_norm": 205.75985219357986,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 2.294452428817749
+    },
+    {
+      "kd_loss": 1.2157514095306396,
+      "projector_grad_norm": 1.529940809865773,
+      "step": 2,
+      "student_grad_norm": 96.05488600531747,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 2.4315028190612793
+    },
+    {
+      "kd_loss": 1.2377068996429443,
+      "projector_grad_norm": 1.7885020490379893,
+      "step": 3,
+      "student_grad_norm": 119.90189497404458,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 2.4754137992858887
+    },
+    {
+      "kd_loss": 1.1736743450164795,
+      "projector_grad_norm": 1.6702965219924886,
+      "step": 4,
+      "student_grad_norm": 42.37610310500987,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 2.347348690032959
+    },
+    {
+      "kd_loss": 1.1075406074523926,
+      "projector_grad_norm": 1.719475072351857,
+      "step": 5,
+      "student_grad_norm": 27.123406923562342,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 2.215081214904785
+    },
+    {
+      "kd_loss": 0.9886411428451538,
+      "projector_grad_norm": 1.534759247050064,
+      "step": 6,
+      "student_grad_norm": 22.61565647005892,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 1.9772822856903076
+    },
+    {
+      "kd_loss": 0.9472505450248718,
+      "projector_grad_norm": 1.8251510160483748,
+      "step": 7,
+      "student_grad_norm": 29.73762797732834,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 1.8945010900497437
+    },
+    {
+      "kd_loss": 0.820604681968689,
+      "projector_grad_norm": 1.5295692878874563,
+      "step": 8,
+      "student_grad_norm": 14.021945380106875,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 1.641209363937378
+    },
+    {
+      "kd_loss": 0.7596622109413147,
+      "projector_grad_norm": 1.3049043709641748,
+      "step": 9,
+      "student_grad_norm": 8.338188648956061,
+      "teacher_grad_clear": true,
+      "weighted_kd_loss": 1.5193244218826294
+    }
+  ],
+  "not_verified": [
+    "real pretrained DINOv3 weights",
+    "COCO/coco128 detection training",
+    "mAP or accuracy improvement",
+    "P0/P1 experiment",
+    "multi-seed statistics",
+    "multi-stage or multi-teacher ablations",
+    "foundation_in_total_loss via full detection loss"
+  ],
+  "repository": {
+    "branch": "NOT_A_GIT_CHECKOUT",
+    "commit": "NOT_A_GIT_CHECKOUT",
+    "dirty": false,
+    "local_checkout_note": "source obtained from GitHub main zip because local git lacks remote-https helper",
+    "source_branch": "main",
+    "source_commit": "6a33fd52ce9900dfd54985a3578c33f7854e9af4",
+    "source_tree": "d8afbe8b3fa877259a078484e912a91d09c12ef6",
+    "source_url": "https://github.com/Abby-like-code/YOLO-Master"
+  },
+  "status": "passed",
+  "student": {
+    "config": "ultralytics/cfg/models/26/yolo26-master-n.yaml",
+    "name": "yolo26-master-n",
+    "raw_shape": [
+      2,
+      128,
+      4,
+      4
+    ],
+    "stage": "p4",
+    "tap_source_index": 19,
+    "tap_source_indices": [
+      16,
+      19,
+      22
+    ]
+  },
+  "teacher": {
+    "adapter": "DINOv3Teacher",
+    "layer": "dense.p4",
+    "metadata": {
+      "backend": "transformers",
+      "feature_maps_available": 1,
+      "grid_size": [
+        4,
+        4
+      ],
+      "hidden_dim": 24,
+      "input_size": [
+        64,
+        64
+      ],
+      "model_id": "admission-offline-dinov3",
+      "num_register_tokens": 0,
+      "padded_size": [
+        64,
+        64
+      ],
+      "patch_size": 16,
+      "prefix_tokens": 1
+    },
+    "model_id": "admission-offline-dinov3",
+    "name": "offline-dinov3-adapter",
+    "raw_shape": [
+      2,
+      24,
+      4,
+      4
+    ],
+    "requires_grad": false,
+    "training": false
+  }
+}
