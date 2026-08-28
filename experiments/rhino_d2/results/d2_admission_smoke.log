@@ -1,0 +1,66 @@
+D2 Foundation Distillation Admission Check
+claim: admission_smoke_only_no_accuracy_claim
+repository:
+  remote: NOT_A_GIT_CHECKOUT
+  branch: NOT_A_GIT_CHECKOUT
+  head: NOT_A_GIT_CHECKOUT
+  status_short: NOT_A_GIT_CHECKOUT
+  source_url: https://github.com/Abby-like-code/YOLO-Master
+  source_branch: main
+  source_commit: 6a33fd52ce9900dfd54985a3578c33f7854e9af4
+  source_tree: d8afbe8b3fa877259a078484e912a91d09c12ef6
+  local_checkout_note: source obtained from GitHub main zip because local git lacks remote-https helper
+environment:
+  python: 3.14.2 (tags/v3.14.2:df79316, Dec  5 2025, 17:18:21) [MSC v.1944 64 bit (AMD64)]
+  python_executable: C:\Users\16511\AppData\Local\Programs\Python\Python314\python.exe
+  platform: Windows-11-10.0.26200-SP0
+  torch: 2.13.0+cpu
+  cuda_runtime: None
+  cuda_available: False
+  gpu_count: 0
+  gpu: none
+  ultralytics: 8.4.101
+  ultralytics_file: C:\Users\16511\Documents\ChatGPT\New project\YOLO-Master-main\ultralytics\__init__.py
+WARNING no model scale passed. Assuming scale='n'.
+teacher:
+  model: DINOv3Teacher
+  layer: dense.p4
+  raw_feature_shape: [2, 24, 4, 4]
+  requires_grad: False
+  training: False
+student:
+  model: yolo26-master-n
+  stage: p4
+  raw_feature_shape: [2, 128, 4, 4]
+alignment:
+  student_aligned_shape: [2, 32, 4, 4]
+  teacher_aligned_shape: [2, 32, 4, 4]
+  spatial: teacher (4, 4) -> (4, 4) mode=native
+  channel: student 128 -> 32; teacher 24 -> 32
+  projector_trainable: True
+  teacher_projection_frozen: True
+  student_prediction_type: dict
+step 0: raw_kd_loss=1.21445036 weighted_kd_loss=2.42890072 student_grad_norm=391.27840651 projector_grad_norm=1.51780915 teacher_grad_clear=True
+step 1: raw_kd_loss=1.14722621 weighted_kd_loss=2.29445243 student_grad_norm=205.75985219 projector_grad_norm=1.83511061 teacher_grad_clear=True
+step 2: raw_kd_loss=1.21575141 weighted_kd_loss=2.43150282 student_grad_norm=96.05488601 projector_grad_norm=1.52994081 teacher_grad_clear=True
+step 3: raw_kd_loss=1.23770690 weighted_kd_loss=2.47541380 student_grad_norm=119.90189497 projector_grad_norm=1.78850205 teacher_grad_clear=True
+step 4: raw_kd_loss=1.17367435 weighted_kd_loss=2.34734869 student_grad_norm=42.37610311 projector_grad_norm=1.67029652 teacher_grad_clear=True
+step 5: raw_kd_loss=1.10754061 weighted_kd_loss=2.21508121 student_grad_norm=27.12340692 projector_grad_norm=1.71947507 teacher_grad_clear=True
+step 6: raw_kd_loss=0.98864114 weighted_kd_loss=1.97728229 student_grad_norm=22.61565647 projector_grad_norm=1.53475925 teacher_grad_clear=True
+step 7: raw_kd_loss=0.94725055 weighted_kd_loss=1.89450109 student_grad_norm=29.73762798 projector_grad_norm=1.82515102 teacher_grad_clear=True
+step 8: raw_kd_loss=0.82060468 weighted_kd_loss=1.64120936 student_grad_norm=14.02194538 projector_grad_norm=1.52956929 teacher_grad_clear=True
+step 9: raw_kd_loss=0.75966221 weighted_kd_loss=1.51932442 student_grad_norm=8.33818865 projector_grad_norm=1.30490437 teacher_grad_clear=True
+final admission checks:
+  teacher_feature_extracted: True
+  student_feature_extracted: True
+  alignment_success: True
+  finite_loss: True
+  nonzero_loss: True
+  teacher_frozen: True
+  teacher_excluded_from_optimizer: True
+  student_gradient: True
+  projector_gradient: True
+  kd_loss_decreased: True
+status: passed
+json_out: C:\Users\16511\Documents\ChatGPT\New project\YOLO-Master-main\experiments\rhino_d2\results\d2_admission_smoke.json
+env_out: C:\Users\16511\Documents\ChatGPT\New project\YOLO-Master-main\experiments\rhino_d2\env\environment.txt
