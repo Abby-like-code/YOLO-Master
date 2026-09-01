@@ -130,8 +130,8 @@ def _write_environment(path: Path, env: dict[str, Any], repo: dict[str, Any]) ->
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--config", required=True, type=Path)
-    parser.add_argument("--json-out", type=Path, default=ROOT / "experiments/rhino_d2/results/d2_admission_smoke.json")
-    parser.add_argument("--env-out", type=Path, default=ROOT / "experiments/rhino_d2/env/environment.txt")
+    parser.add_argument("--json-out", type=Path, default=ROOT / "experiments/D2/results/d2_admission_smoke.json")
+    parser.add_argument("--env-out", type=Path, default=ROOT / "experiments/D2/env/environment.txt")
     args = parser.parse_args()
 
     cfg = _load_config(args.config)

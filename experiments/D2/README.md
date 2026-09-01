@@ -44,7 +44,7 @@ KD loss: L2 KD through existing `FoundationDistillationModel` dispatch
 Executed from repository root:
 
 ```powershell
-python -u experiments\rhino_d2\scripts\d2_admission_smoke.py --config experiments\rhino_d2\configs\d2_admission_smoke.yaml 2>&1 | Tee-Object -FilePath experiments\rhino_d2\results\d2_admission_smoke.log
+python -u experiments\D2\scripts\d2_admission_smoke.py --config experiments\D2\configs\d2_admission_smoke.yaml 2>&1 | Tee-Object -FilePath experiments\D2\results\d2_admission_smoke.log
 ```
 
 ## Evidence
